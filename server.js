@@ -58,6 +58,9 @@ server.listen(3000, () => {
 
 function serveStaticFile(req, res) {
     try {
+        if(req.url.endsWith('.css')) {
+            res.writeHead(200, { 'Content-Type': 'text/css' });
+        }
         res.end(fs.readFileSync('./' + req.url));
 
     }
