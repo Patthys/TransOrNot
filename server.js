@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
             }
 
         }
-        if (req.headers.cookie) {
+        if (req.headers.cookie && sessions[req.headers.cookie.split('=')[1]] != undefined){
             let sessionId = req.headers.cookie.split('=')[1];
             sessions[sessionId].score = 0;
             res.end(fs.readFileSync('./public/index.html'));
@@ -35,6 +35,16 @@ const server = http.createServer((req, res) => {
             res.end();
         }
 
+    }
+    else if(req.url ==="/reset"){
+        if(req.headers.cookie && sessions[req.headers.cookie.split('=')[1]] != undefined){
+        let sessionId = req.headers.cookie.split('=')[1];
+        sessions[sessionId].alreadySortedNumbersTrans = [];
+        sessions[sessionId].alreadySortedNumbersWomen = [];
+    }
+    res.statusCode = 302;
+        res.setHeader('Location', '/');
+        res.end();
     }
     else if (req.url === '/game') {
         game(req, res);

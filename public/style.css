@@ -5,6 +5,7 @@ body {
     background-image: linear-gradient(to right, #ff4081 50%, #2196F3 50%);
 }
 
+
 .container {
     max-width: 800px;
     margin: 50px auto;
@@ -52,6 +53,8 @@ body {
 }
 
 .blueButton {
+    margin-top: 4px;
+    font-size: 70%;
     background-color: #2196F3;
 }
 
