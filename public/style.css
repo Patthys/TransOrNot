@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #ff4081 50%, #2196F3 50%);
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 32%;
+}
+.logo_in_game {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 20%;
+}
+
+.displayedImage {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    max-height: 400px; /* Hauteur maximale */
+    object-fit: cover; /* Redimensionne l'image tout en conservant les proportions */
+    border-radius: 10px;
+}
+
+.validButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 40px;
+    margin: 0 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.blueButton {
+    background-color: #2196F3;
+}
+
+.pinkButton {
+    background-color: #ff4081;
+}
+
+.button:hover {
+    background-color: #0b7dda;
+    color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        width: 90%;
+    }
+}
+.startButton {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff4081;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.startButton:hover {
+    background-color: #ff0066;
+}
