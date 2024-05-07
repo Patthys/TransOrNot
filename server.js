@@ -95,7 +95,7 @@ function game(req, res) {
     let isTrans = Math.floor(Math.random() * 2);
     sessions[id].isTrans = isTrans;
     
-    if (sessions[id].alreadySortedNumbersTrans.length === dossier_trans.length) {
+    if (sessions[id].alreadySortedNumbersTrans.length === dossier_trans.length || sessions[id].alreadySortedNumbersWomen.length === dossier_femme.length) {
         youwin(req, res);
         return;
     }
