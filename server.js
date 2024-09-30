@@ -5,7 +5,7 @@ const dossier_femme = fs.readdirSync('./public/images/femmes_normales');
 let score = 0;
 let lastSessionId = 0; //a push dans une data base
 const sessions = [];
-
+//test github
 const server = http.createServer((req, res) => {
 
     if (req.url === '/') {
